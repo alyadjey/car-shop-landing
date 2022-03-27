@@ -1,4 +1,7 @@
 #second-screen {
+   .container {
+      overflow: hidden;
+   }
    .select-selected.color-primary-300 {
       border-color: $color-primary-300 !important;
    }

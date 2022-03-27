@@ -70,6 +70,10 @@
   color: #000;
 }
 
+#second-screen .container {
+  overflow: hidden;
+}
+
 #second-screen .select-selected.color-primary-300 {
   border-color: #df4e3c !important;
 }
@@ -511,6 +515,15 @@ body {
 a {
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
 }
 
 ul,
