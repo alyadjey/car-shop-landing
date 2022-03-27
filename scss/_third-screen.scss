@@ -1,0 +1,31 @@
+#third-screen {
+   background-color: $color-primary-100;
+
+   #requestEmail {
+      background-color: $color-primary-100;
+      border: 1px solid $color-secondary-300;
+      border-radius: 15px;
+      color: $color-primary-200;
+      padding: 13px;
+      min-width: 300px;
+      outline: none;
+      cursor: pointer;
+      font-family: $font-stack-noto-sans;
+   }
+   .requestEmail__button {
+      background: $color-primary-200;
+      border: 1px solid;
+      border-color: transparent;
+      border-radius: 15px;
+      padding: 13px 43px;
+      color: $color-primary-100;
+      transition: 0.5s;
+      font-family: $font-stack-noto-sans;
+      &:hover {
+         color: $color-primary-200;
+         background: $color-primary-100;
+         text-decoration: none;
+         border-color: $color-primary-200;
+      }
+   }
+}

@@ -1,0 +1,548 @@
+#first-screen {
+  height: 100vh;
+  background: url("../img/background.png") no-repeat;
+  background-size: cover;
+  min-height: 600px;
+}
+
+#first-screen header {
+  background-color: transparent;
+}
+
+#first-screen header .burger__menu {
+  cursor: pointer;
+}
+
+#first-screen header .burger__menu:before {
+  font-family: 'icomoon';
+  content: '\e9bd';
+  color: white;
+  font-size: 40px;
+}
+
+#first-screen header .burger__menu:hover {
+  text-decoration: none;
+}
+
+#first-screen header .header__nav ul a {
+  font-weight: 500;
+  color: #f8f8f8;
+}
+
+#first-screen header .header__nav ul a:hover {
+  text-decoration: none;
+}
+
+#first-screen .title__container,
+#first-screen .description {
+  color: #f8f8f8;
+}
+
+#first-screen .title__container h1,
+#first-screen .description h1 {
+  font-weight: 700;
+  line-height: 68px;
+}
+
+#first-screen .title__container p,
+#first-screen .description p {
+  max-width: 295px;
+}
+
+#first-screen .title__container p:first-child,
+#first-screen .description p:first-child {
+  padding-right: 20px;
+}
+
+#first-screen .title__containerButton {
+  padding: 13px 90px 16px;
+  background-color: transparent;
+  color: #f8f8f8;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  font-size: 24px;
+  border-radius: 15px;
+  border: 2px solid #f8f8f8;
+}
+
+#first-screen .title__containerButton:hover {
+  background-color: #f8f8f8;
+  color: #000;
+}
+
+#second-screen .select-selected.color-primary-300 {
+  border-color: #df4e3c !important;
+}
+
+#second-screen .custom-select-test {
+  position: relative;
+  font-family: Arial;
+  height: 100%;
+}
+
+#second-screen .custom-select-test select {
+  display: none;
+}
+
+#second-screen .carAvailability {
+  color: #8d8d8d;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+#second-screen .carAvailabilityInput {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+#second-screen .carAvailabilityInput + label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#second-screen .carAvailabilityInput + label:before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+#second-screen .carAvailabilityInput:checked + label::before {
+  border-color: #df4e3c;
+  background-color: #df4e3c;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+#second-screen .carAvailabilityInput:checked + label {
+  color: #df4e3c;
+}
+
+#second-screen .carAvailabilityInput:not(:disabled):not(:checked) + label:hover::before {
+  border-color: #8d8d8d;
+}
+
+#second-screen .carAvailabilityInput:not(:disabled):active + label::before {
+  background-color: #8d8d8d;
+  border-color: #8d8d8d;
+}
+
+#second-screen .carAvailabilityInput:disabled + label::before {
+  background-color: #8d8d8d;
+}
+
+#second-screen .select-selected {
+  background-color: transparent;
+  border: 1px solid !important;
+  border-color: #bdbdbd !important;
+  border-radius: 15px;
+}
+
+#second-screen .select-selected:after {
+  position: absolute;
+  content: '';
+  top: 20px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #000 transparent transparent transparent;
+}
+
+#second-screen .select-arrow-active {
+  border-bottom: none !important;
+  border-radius: 15px 15px 0px 0px;
+}
+
+#second-screen .select-arrow-active:after {
+  border-color: transparent transparent #000 transparent;
+  top: 10px;
+}
+
+#second-screen .select-items div,
+#second-screen .select-selected {
+  color: #000;
+  padding: 8px 16px;
+  border: 1px solid #bdbdbd;
+  background-color: #fff;
+  font-family: "Noto Sans", sans-serif;
+  cursor: pointer;
+  padding: 13px;
+  border-top: none;
+  border-bottom: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#second-screen .select-items div:last-child,
+#second-screen .select-selected:last-child {
+  border-bottom: 1px solid #bdbdbd;
+  border-radius: 0px 0px 15px 15px;
+}
+
+#second-screen .select-items {
+  position: absolute;
+  background-color: transparent;
+  top: 95%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+#second-screen .select-hide {
+  display: none;
+}
+
+#second-screen .select-items div:hover,
+#second-screen .same-as-selected {
+  color: #df4e3c;
+}
+
+#second-screen .custom-select-sort {
+  position: relative;
+  font-family: Arial;
+  cursor: pointer;
+}
+
+#second-screen .custom-select-sort select {
+  display: none;
+}
+
+#second-screen .custom-select-sort .custom-select-sort__text {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+#second-screen .select-selected-sort {
+  color: #8d8d8d;
+  font-size: 12px;
+  line-height: 16px;
+  background-color: #fff;
+  min-width: 170px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+#second-screen .select-selected-sort:hover {
+  color: #df4e3c;
+}
+
+#second-screen .select-selected-sort:after {
+  position: absolute;
+  content: '';
+  top: 27px;
+  right: 60px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+}
+
+#second-screen .select-selected-sort .select-arrow-active-sort:after {
+  border-color: transparent;
+  top: 20px;
+}
+
+#second-screen .select-items-sort {
+  position: absolute;
+  background-color: #fff;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  border-radius: 15px;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+#second-screen .select-items-sort div {
+  color: #000;
+  padding: 8px 16px;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+#second-screen .select-items-sort div:hover,
+#second-screen .select-items-sort div .same-as-selected-sort {
+  color: #df4e3c;
+}
+
+#second-screen .select-hide-sort {
+  display: none;
+}
+
+#second-screen .title h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 50px;
+  line-height: 75px;
+  font-weight: 700;
+}
+
+#second-screen .title__containerButton {
+  color: #f8f8f8;
+  border-color: transparent;
+  border-radius: 15px;
+  background: #df4e3c;
+  padding: 12px;
+  width: 100%;
+  min-width: 200px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+  font-family: "Noto Sans", sans-serif;
+}
+
+#second-screen .title__containerButton:hover {
+  background: transparent;
+  border: 2px solid #df4e3c;
+  color: #df4e3c;
+}
+
+#second-screen .card {
+  border: none;
+  background-color: transparent;
+}
+
+#second-screen .card .card__sold {
+  position: relative;
+}
+
+#second-screen .card .card__sold h1 {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  margin-left: -25%;
+  top: 25%;
+  font-size: 50px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+
+#second-screen .card a {
+  color: #000;
+  font-family: "Noto Sans", sans-serif;
+}
+
+#second-screen .card :hover a {
+  text-decoration: underline;
+}
+
+#second-screen .card .badge {
+  left: 0;
+  bottom: 0;
+  background: #000;
+  color: #f8f8f8;
+  padding: 3px 20px;
+  border-radius: 0 25px 25px 0;
+  font-family: "Poppins", sans-serif;
+}
+
+#second-screen .card .card-body {
+  font-size: 14px;
+  line-height: 19px;
+  color: #8d8d8d;
+}
+
+#second-screen .card .card-body span {
+  font-family: "Noto Sans", sans-serif;
+}
+
+#second-screen .card .card-body .card__price {
+  color: #000;
+  font-size: 20px;
+  line-height: 27px;
+}
+
+#second-screen .card .card-body .card-title {
+  color: #000;
+  font-size: 17px;
+  line-height: 23px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#second-screen .card .card-body .card-title .card__title__year {
+  color: #8d8d8d;
+  font-size: 17px;
+  line-height: 26px;
+  font-family: "Poppins", sans-serif;
+}
+
+#second-screen .card .card-body .card__carInfo {
+  border-left: 1px solid #8d8d8d;
+}
+
+#third-screen {
+  background-color: #000;
+}
+
+#third-screen #requestEmail {
+  background-color: #000;
+  border: 1px solid #bdbdbd;
+  border-radius: 15px;
+  color: #f8f8f8;
+  padding: 13px;
+  min-width: 300px;
+  outline: none;
+  cursor: pointer;
+  font-family: "Noto Sans", sans-serif;
+}
+
+#third-screen .requestEmail__button {
+  background: #f8f8f8;
+  border: 1px solid;
+  border-color: transparent;
+  border-radius: 15px;
+  padding: 13px 43px;
+  color: #000;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-family: "Noto Sans", sans-serif;
+}
+
+#third-screen .requestEmail__button:hover {
+  color: #f8f8f8;
+  background: #000;
+  text-decoration: none;
+  border-color: #f8f8f8;
+}
+
+#fourth-screen h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 75px;
+}
+
+#fourth-screen #accordion {
+  color: #000;
+}
+
+#fourth-screen #accordion .shadowCard .card-header {
+  border-bottom: none;
+}
+
+#fourth-screen #accordion .shadowCard h5 {
+  padding-left: 1.25rem;
+}
+
+#fourth-screen #accordion .shadowCard h5 .btn {
+  color: #df4e3c;
+  font-weight: 700;
+}
+
+#fourth-screen #accordion .shadowCard p {
+  padding-left: 2rem;
+}
+
+#fourth-screen #accordion .card-header {
+  background-color: transparent;
+}
+
+#fourth-screen #accordion .card-header .btn-link {
+  color: #000;
+  font-weight: 500;
+}
+
+#fourth-screen #accordion .card-header .btn-link:focus, #fourth-screen #accordion .card-header .btn-link:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-decoration: none;
+}
+
+#fiveth-screen .footer__bg {
+  background-color: #000;
+}
+
+#fiveth-screen a {
+  color: #f8f8f8;
+  font-weight: 600;
+}
+
+#fiveth-screen a:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  #navLinks {
+    position: absolute;
+    right: 0px;
+    background: rgba(14, 14, 15, 0.85);
+    width: 100%;
+    max-height: 140px;
+    opacity: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  #navLinks li {
+    padding-right: 1rem;
+  }
+}
+
+body {
+  font-size: 15px;
+  line-height: 20px;
+  color: #f8f8f8;
+  font-family: "Noto Sans", sans-serif;
+}
+
+a {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.title {
+  color: #aeaeae;
+}
+
+.title h2 {
+  line-height: 75px;
+}
+
+.shadowCard {
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  position: relative;
+}
+
+.shadowCard:before {
+  position: absolute;
+  content: '';
+  top: -1px;
+  width: 100%;
+  height: 0;
+  border: 1px solid white;
+}
+
+.burger__menu__position {
+  opacity: 1 !important;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}

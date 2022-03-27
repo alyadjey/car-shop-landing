@@ -1,0 +1,12 @@
+#fiveth-screen {
+   .footer__bg {
+      background-color: $color-primary-100;
+   }
+   a {
+      color: $color-primary-200;
+      font-weight: 600;
+      &:hover {
+         text-decoration: none;
+      }
+   }
+}

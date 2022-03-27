@@ -1,0 +1,38 @@
+#fourth-screen {
+   h2 {
+      font-family: $font-stack-poppins;
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 75px;
+   }
+   #accordion {
+      color: $color-primary-100;
+      .shadowCard {
+         .card-header {
+            border-bottom: none;
+         }
+         h5 {
+            padding-left: 1.25rem;
+            .btn {
+               color: $color-primary-300;
+               font-weight: 700;
+            }
+         }
+         p {
+            padding-left: 2rem;
+         }
+      }
+      .card-header {
+         background-color: transparent;
+         .btn-link {
+            color: $color-primary-100;
+            font-weight: 500;
+            &:focus,
+            &:hover {
+               box-shadow: none;
+               text-decoration: none;
+            }
+         }
+      }
+   }
+}

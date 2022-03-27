@@ -1,0 +1,277 @@
+#second-screen {
+   .select-selected.color-primary-300 {
+      border-color: $color-primary-300 !important;
+   }
+   .custom-select-test {
+      position: relative;
+      font-family: Arial;
+      height: 100%;
+
+      select {
+         display: none;
+      }
+   }
+   .carAvailability {
+      color: $color-secondary-200;
+      font-size: 12px;
+      line-height: 16px;
+      font-family: $font-stack-noto-sans;
+   }
+   .carAvailabilityInput {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      + label {
+         display: inline-flex;
+         align-items: center;
+         user-select: none;
+      }
+      + label:before {
+         content: '';
+         display: inline-block;
+         width: 16px;
+         height: 16px;
+         flex-shrink: 0;
+         flex-grow: 0;
+         border: 1px solid #adb5bd;
+         border-radius: 0.25em;
+         margin-right: 0.5em;
+         background-repeat: no-repeat;
+         background-position: center center;
+         background-size: 50% 50%;
+      }
+      &:checked + label::before {
+         border-color: $color-primary-300;
+         background-color: $color-primary-300;
+         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+      }
+      &:checked + label {
+         color: $color-primary-300;
+      }
+      &:not(:disabled):not(:checked) + label:hover::before {
+         border-color: $color-secondary-200;
+      }
+      &:not(:disabled):active + label::before {
+         background-color: $color-secondary-200;
+         border-color: $color-secondary-200;
+      }
+
+      &:disabled + label::before {
+         background-color: $color-secondary-200;
+      }
+   }
+   .select-selected {
+      background-color: transparent;
+      border: 1px solid !important;
+      border-color: $color-secondary-300 !important;
+      border-radius: 15px;
+
+      &:after {
+         position: absolute;
+         content: '';
+         top: 20px;
+         right: 10px;
+         width: 0;
+         height: 0;
+         border: 6px solid transparent;
+         border-color: $color-primary-100 transparent transparent transparent;
+      }
+   }
+   .select-arrow-active {
+      border-bottom: none !important;
+      border-radius: 15px 15px 0px 0px;
+      &:after {
+         border-color: transparent transparent $color-primary-100 transparent;
+         top: 10px;
+      }
+   }
+   .select-items div,
+   .select-selected {
+      color: $color-primary-100;
+      padding: 8px 16px;
+      border: 1px solid $color-secondary-300;
+      background-color: $color-secondary-500;
+      font-family: $font-stack-noto-sans;
+      cursor: pointer;
+      padding: 13px;
+      border-top: none;
+      border-bottom: none;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      &:last-child {
+         border-bottom: 1px solid $color-secondary-300;
+         border-radius: 0px 0px 15px 15px;
+      }
+   }
+
+   .select-items {
+      position: absolute;
+      background-color: transparent;
+      top: 95%;
+      left: 0;
+      right: 0;
+      z-index: 99;
+   }
+
+   .select-hide {
+      display: none;
+   }
+
+   .select-items div:hover,
+   .same-as-selected {
+      color: $color-primary-300;
+   }
+
+   .custom-select-sort {
+      position: relative;
+      font-family: Arial;
+      cursor: pointer;
+      select {
+         display: none;
+      }
+      .custom-select-sort__text {
+         font-family: $font-stack-noto-sans;
+         font-size: 12px;
+         line-height: 16px;
+      }
+   }
+
+   .select-selected-sort {
+      color: $color-secondary-200;
+      font-size: 12px;
+      line-height: 16px;
+      background-color: $color-secondary-500;
+      min-width: 170px;
+      font-family: $font-stack-noto-sans;
+      &:hover {
+         color: $color-primary-300;
+      }
+      &:after {
+         position: absolute;
+         content: '';
+         top: 27px;
+         right: 60px;
+         width: 0;
+         height: 0;
+         border: 6px solid transparent;
+      }
+      .select-arrow-active-sort:after {
+         border-color: transparent;
+         top: 20px;
+      }
+   }
+
+   .select-items-sort {
+      position: absolute;
+      background-color: $color-secondary-500;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      border-radius: 15px;
+      font-size: 12px;
+      line-height: 16px;
+      font-family: $font-stack-noto-sans;
+      div {
+         color: $color-primary-100;
+         padding: 8px 16px;
+         border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+         cursor: pointer;
+         &:hover,
+         .same-as-selected-sort {
+            color: $color-primary-300;
+         }
+      }
+   }
+
+   .select-hide-sort {
+      display: none;
+   }
+   .title h2 {
+      font-family: $font-stack-poppins;
+      font-size: 50px;
+      line-height: 75px;
+      font-weight: 700;
+   }
+   .title__containerButton {
+      color: $color-primary-200;
+      border-color: transparent;
+      border-radius: 15px;
+      background: $color-primary-300;
+      padding: 12px;
+      width: 100%;
+      min-width: 200px;
+      transition: 0.5s;
+      cursor: pointer;
+      font-family: $font-stack-noto-sans;
+      &:hover {
+         background: transparent;
+         border: 2px solid $color-primary-300;
+         color: $color-primary-300;
+      }
+   }
+   .card {
+      border: none;
+      background-color: transparent;
+      .card__sold {
+         position: relative;
+         h1 {
+            position: absolute;
+            width: 100%;
+            left: 50%;
+            margin-left: -25%;
+            top: 25%;
+            font-size: 50px;
+            font-weight: 700;
+            font-family: $font-stack-poppins;
+         }
+      }
+      a {
+         color: $color-primary-100;
+         font-family: $font-stack-noto-sans;
+      }
+      :hover a {
+         text-decoration: underline;
+      }
+      .badge {
+         left: 0;
+         bottom: 0;
+         background: $color-primary-100;
+         color: $color-primary-200;
+         padding: 3px 20px;
+         border-radius: 0 25px 25px 0;
+         font-family: $font-stack-poppins;
+      }
+      .card-body {
+         font-size: 14px;
+         line-height: 19px;
+         color: $color-secondary-200;
+         span {
+            font-family: $font-stack-noto-sans;
+         }
+         .card__price {
+            color: $color-primary-100;
+            font-size: 20px;
+            line-height: 27px;
+         }
+         .card-title {
+            color: $color-primary-100;
+            font-size: 17px;
+            line-height: 23px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            .card__title__year {
+               color: $color-secondary-200;
+               font-size: 17px;
+               line-height: 26px;
+               font-family: $font-stack-poppins;
+            }
+         }
+         .card__carInfo {
+            border-left: 1px solid $color-secondary-200;
+         }
+      }
+   }
+}
